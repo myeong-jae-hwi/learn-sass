@@ -1,0 +1,12 @@
+$base-color: #c6538c;
+$bg-color: #f4f4f4;
+
+body {
+  background-color: $bg-color;
+  color: $base-color;
+}
+
+p {
+  font-size: 16px;
+  font-weight: bold;
+}
