@@ -1,0 +1,6 @@
+$base-color: #bf2243;
+$border-color: rgba($base-color, 0.7);
+
+.alert {
+  border: 1px solid $border_color; // ←
+}
