@@ -1,0 +1,11 @@
+@use "./techkit/mixins" as *;
+@use "./techkit/likelion" as lion;
+
+.wrapper {
+  border: 1px solid #f00;
+  @include size(100px, 200px);
+  margin: $spacing-1;
+  padding: lion.$spacing-2;
+}
+
+// techit.lion-$spacing-1
