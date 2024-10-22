@@ -1,0 +1,63 @@
+@mixin resetList() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin width($width, $height) {
+  width: $width;
+  inline-size: $width;
+  height: $height;
+  block-size: $height;
+}
+
+@mixin flexBox($direction, $justify: center, $align, $padding: 20px) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  padding: $padding;
+}
+
+@mixin hover() {
+  &:hover {
+    background-color: darkblue;
+    color: white;
+    @content;
+  }
+}
+
+.flexContainer {
+  @include flexBox(row, center, center);
+  @include hover {
+    color: red;
+  }
+}
+
+ul {
+  background-color: yellow;
+  @include resetList();
+}
+
+ol {
+  font-size: 1rem;
+  @include resetList();
+  @include width(100px, 200px);
+}
+
+@mixin mq($max-width) {
+  @if ($max-width <= 768px) {
+    @content;
+  }
+  @if ($max-width > 768px and $max-width <= 1024px) {
+    @content;
+  }
+}
+
+.box {
+  @include mq(306px) {
+    padding: 20px;
+  }
+  @include mq(769px) {
+    padding: 40px;
+  }
+}
