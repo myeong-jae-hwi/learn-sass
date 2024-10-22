@@ -1,0 +1,7 @@
+.error {
+  color: #bf2243;
+  &--serious {
+    @extend .error;
+    font-weight: bold;
+  }
+}
