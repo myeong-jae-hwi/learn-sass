@@ -1,5 +1,4 @@
-$spacing: 1.5rem;
-
-div {
-  padding: $spacing;
-}
+@use "base";
+@use "components";
+@use "layout";
+@use "pages";

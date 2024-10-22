@@ -1,0 +1,18 @@
+// 가로크기와 세로크기를 결정하는 mixin
+
+@mixin inline-size($width) {
+  width: $width;
+  inline-size: $width;
+}
+
+@mixin block-size($height) {
+  height: $height;
+  block-size: $height;
+}
+
+@mixin size($width, $height: null) {
+  @include inline-size($width);
+  @if $height != null {
+    @include block-size($height);
+  }
+}
