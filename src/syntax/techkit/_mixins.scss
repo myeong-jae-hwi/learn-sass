@@ -1,0 +1,7 @@
+$spacing-1: 1rem;
+$spacing-2: 2rem;
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
