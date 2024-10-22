@@ -1,6 +1,9 @@
-$base-color: #bf2243;
-$border-color: rgba($base-color, 0.7);
+$color: #bf2243; //전역 변수 선언
+.rule-1 {
+  color: $color;
+}
 
-.alert {
-  border: 1px solid $border_color; // ←
+$color: #0e0948; //이름이 같은 전역변수 선언
+.rule-2 {
+  color: $color;
 }
