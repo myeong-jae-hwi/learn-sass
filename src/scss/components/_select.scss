@@ -13,18 +13,23 @@
 
 .global {
   display: inline-block;
+  position: absolute;
+  left: 10px;
   @include bg_img("../assets/icon/global.svg");
   @include size(16px, 16px);
 }
 
 .arrow {
   display: inline-block;
+  position: absolute;
   @include bg_img("./../assets/icon/triangle.svg");
   @include size(12px, 12px);
-  margin-left: 6px;
+  pointer-events: none;
+  right: 10px;
 }
 
 .select {
+  position: relative;
   padding: 3px;
   @include size(100px, 2rem);
   border: 1px solid #ccc;
@@ -36,10 +41,12 @@
 }
 
 #select {
+  @include size(100%, 100%);
   -o-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
   margin-left: 6px;
   appearance: none;
+  text-align: center;
 }
