@@ -42,29 +42,38 @@ $theme: (
   animation-delay: 9s + 21s; // 30s
 }
 
-@debug "타입: " + meta.type-of($theme); // Debug: map
+$size: 10px;
 
-@debug "타입: " + meta.type-of($units); // Debug: list
-@debug "타입: " + meta.type-of($font-families); // Debug: list
-@debug "타입: " + meta.type-of($square-bracket); // Debug: list
-
-@debug "타입: " + meta.type-of($yes); // Debug: bool
-@debug "타입: " + meta.type-of($no); // Debug: bool
-
-@debug "타입: " + meta.type-of($hex); // Debug: color
-@debug "타입: " + meta.type-of($keyword); // Debug: color
-@debug "타입: " + meta.type-of($color-function); // Debug: color
-
-@debug "타입: " + meta.type-of($pretendard); // Debug: string
-@debug "타입: " + meta.type-of($spoqa); // Debug: string
-
-@debug "타입: " + meta.type-of($num); // Debug: number
-@debug "타입: " + meta.type-of($unit); // Debug: number
-
-@debug "타입: " + meta.type-of($noting); // null
-
-@function removeUnit($temp) {
-  @return math.div($temp, 1px);
+.box {
+  width: $size;
+  height: $size;
 }
 
-@debug removeUnit(100px); // Debug: 100
+@debug "size: " + $size;
+
+// @debug "타입: " + meta.type-of($theme); // Debug: map
+
+// @debug "타입: " + meta.type-of($units); // Debug: list
+// @debug "타입: " + meta.type-of($font-families); // Debug: list
+// @debug "타입: " + meta.type-of($square-bracket); // Debug: list
+
+// @debug "타입: " + meta.type-of($yes); // Debug: bool
+// @debug "타입: " + meta.type-of($no); // Debug: bool
+
+// @debug "타입: " + meta.type-of($hex); // Debug: color
+// @debug "타입: " + meta.type-of($keyword); // Debug: color
+// @debug "타입: " + meta.type-of($color-function); // Debug: color
+
+// @debug "타입: " + meta.type-of($pretendard); // Debug: string
+// @debug "타입: " + meta.type-of($spoqa); // Debug: string
+
+// @debug "타입: " + meta.type-of($num); // Debug: number
+// @debug "타입: " + meta.type-of($unit); // Debug: number
+
+// @debug "타입: " + meta.type-of($noting); // null
+
+// @function removeUnit($temp) {
+//   @return math.div($temp, 1px);
+// }
+
+// @debug removeUnit(100px); // Debug: 100
